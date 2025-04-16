@@ -5,7 +5,6 @@ import { db } from '../../services/firebaseConnection'
 
 import {
     setDoc,
-    addDoc,
     getDoc,
     doc
 } from 'firebase/firestore'
@@ -20,7 +19,6 @@ export function Networks() {
             const docRef = doc(db, "social", "link")
             getDoc(docRef)
             .then((snapshot) =>{
-                console.log(snapshot)
                 if(snapshot.data() !== undefined){
                     setFacebook(snapshot.data()?.facebook)
                     setInstagram(snapshot.data()?.instagram)
