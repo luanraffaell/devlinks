@@ -101,7 +101,7 @@ export function Admin(){
                 <section className="flex my-4 gap-5">
                     <div className=" flex gap-2">
                     <label className="text-white font-medium mt-2 mb-1">Cor do link</label>
-                    <input
+                    <input className="mt-2 mb-1"
                         type="color"
                         value={textColorInput}
                         onChange={(e) => setTextColorInput(e.target.value)}
@@ -109,7 +109,7 @@ export function Admin(){
                     </div>
                     <div className="flex gap-2">
                     <label className="text-white font-medium mt-2 mb-1">Fundo do link</label>
-                    <input
+                    <input className="mt-2 mb-1"
                         type="color"
                         value={backgroundColorInput}
                         onChange={(e) => setBackGroundColorInput(e.target.value)}
