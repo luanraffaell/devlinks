@@ -1,54 +1,54 @@
-# React + TypeScript + Vite
+# DevLink
+![Captura de tela 2025-04-16 112903](https://github.com/user-attachments/assets/98c59e9a-aefe-4014-8832-2cf5983745c1)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+DevLink é uma aplicação web inspirada no Linktree, desenvolvida com **React** e **Vite**, que permite você criar uma página personalizada com links para suas redes sociais e outros conteúdos.
 
-Currently, two official plugins are available:
+## ✨ Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Página de links personalizada, semelhante ao Linktree.
+- Painel administrativo com autenticação.
+- Cadastro, edição e exclusão de links.
+- Customização de estilo: cor de fundo e cor do texto dos botões.
+- Dados armazenados e autenticados via **Firebase**.
 
-## Expanding the ESLint configuration
+## 🚀 Tecnologias Utilizadas
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- [React](https://reactjs.org/)
+- [Vite](https://vitejs.dev/)
+- [Firebase](https://firebase.google.com/) (Auth + Firestore)
+- [Tailwind](https://tailwindcss.com/)
+- [React Router](https://reactrouter.com/)
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 🔐 Variáveis de Ambiente
+
+Crie um arquivo `.env` na raiz do projeto com as seguintes variáveis (exemplo para Firebase):
+
+```env
+VITE_FIREBASE_API_KEY=you_api_key
+VITE_FIREBASE_AUTHDOMAIN=you_auth_domain
+VITE_FIREBASE_PROJECTID=your_project_id
+VITE_FIREBASE_STORAGEBUCKET=your_storage_bucket
+VITE_FIREBASE_MESSAGING_SENDER_ID=your_messaging_sender_id
+VITE_FIREBASE_APP_ID=your_app_id
 ```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+## 📦 Instalação
+Clone o repositório e instale as dependências:
 ```
+git clone https://github.com/luanraffaell/devlinks.git
+cd DEVLINK
+npm install
+
+```
+Inicie o servidor de desenvolvimento:
+```
+npm run dev
+```
+## 🛠️ Painel Administrativo
+
+Acesse o painel com um usuário autenticado para:
+
+Adicionar novos links
+
+Alterar a cor de fundo e do texto dos botões
+
+Visualizar a prévia do botão de links
